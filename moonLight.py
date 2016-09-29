@@ -4,9 +4,10 @@ import lxml
 
 import requests
 
+import time
 
 
-r = requests.get('https://www.timeanddate.com/moon/phases/')
+r = requests.get('http://www.timeanddate.com/moon/phases/usa/raleigh')
 
 data = r.text
 
@@ -34,4 +35,10 @@ elif phaseName = 'Waning Gibbous':
 	lightNumber = 5
 elif phaseName = 'Full':
 	lightNumber = 7
+	
+	
+	
+	
+	
+#time.sleep(86400)
 
