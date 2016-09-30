@@ -3,7 +3,9 @@ import lxml
 import requests
 import time
 
-
+#run this continuously while the moon is on
+#TODO make this run continuously while the moon is on
+#while true:
 #get BeautifulSoup for raleigh moon phase page
 r = requests.get('http://www.timeanddate.com/moon/phases/usa/raleigh') #permalink
 
@@ -29,6 +31,7 @@ print phaseName
 
 
 #determine how lit up the room moon should be
+#TODO: use both phase name and illumination percentage to determine which lights should be on
 lightNumber = 0
 
 if phaseName = 'Waning Crescent':
@@ -43,6 +46,6 @@ elif phaseName = 'Full':
 	
 	
 	
-	
+#only need to update phase once per day
 #time.sleep(86400)
 
