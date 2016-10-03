@@ -31,19 +31,75 @@ print phaseName
 
 
 #determine how lit up the room moon should be
-#TODO: use both phase name and illumination percentage to determine which lights should be on
-lightNumber = 0
+#TODO implement Pi led.on/led.off instead of these variables
+lightOne = 'off'
+lightTwo = 'off'
+lightThree = 'off'
+lightFour = 'off'
+lightFive = 'off'
+lightSix = 'off'
 
-if phaseName = 'Waning Crescent':
-	lightNumber = 1
-elif phaseName = 'Third Quarter':
-	lightNumber = 3
+#TODO refactor this logic
+if 'New Moon' in phaseName or phasePercent < 3:
+	lightOne = 'off'
+	lightTwo = 'off'
+	lightThree = 'off'
+	lightFour = 'off'
+	lightFive = 'off'
+	lightSix = 'off'
+elif 'Waning Crescent' in phaseName:
+	if phasePercent >=3 and phasePercent < 22:
+		lightOne = 'on'
+		lightTwo = 'off'
+		lightThree = 'off'
+		lightFour = 'off'
+		lightFive = 'off'
+		lightSix = 'off'
+	elif phasePercent >= 22 and phasePercent < 45:
+		lightOne = 'on'
+		lightTwo = 'on'
+		lightThree = 'off'
+		lightFour = 'off'
+		lightFive = 'off'
+		lightSix = 'off'
+elif 'Third Quarter' in phaseName:
+	if phasePercent >= 45 and phasePercent < 55
+		lightOne = 'on'
+		lightTwo = 'on'
+		lightThree = 'on'
+		lightFour = 'off'
+		lightFive = 'off'
+		lightSix = 'off'
 elif phaseName = 'Waning Gibbous':
-	lightNumber = 5
-elif phaseName = 'Full':
-	lightNumber = 7
+	if phasePercent >= 55 and phasePercent < 88:
+		lightOne = 'on'
+		lightTwo = 'on'
+		lightThree = 'on'
+		lightFour = 'on'
+		lightFive = 'off'
+		lightSix = 'off'
+	elif phasePercent >= 88 and phasePercent < 97:
+		lightOne = 'on'
+		lightTwo = 'on'
+		lightThree = 'on'
+		lightFour = 'on'
+		lightFive = 'on'
+		lightSix = 'off'		
+elif 'Full' in phaseName or phasePercent >=97:
+	lightOne = 'on'
+	lightTwo = 'on'
+	lightThree = 'on'
+	lightFour = 'on'
+	lightFive = 'on'
+	lightSix = 'on'		
 	
-	
+
+print 'lightOne: ' + lightOne
+print 'lightTwo: ' + lightTwo
+print 'lightThree: ' + lightThree
+print 'lightFour: ' + lightFour
+print 'lightFive: ' + lightFive
+print 'lightSix: ' + lightSix
 	
 	
 #only need to update phase once per day
