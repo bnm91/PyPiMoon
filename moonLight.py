@@ -40,7 +40,9 @@ lightFive = 'off'
 lightSix = 'off'
 
 #TODO refactor this logic
+#TODO add waxing logic
 if 'New Moon' in phaseName or phasePercent < 3:
+	print 'new'
 	lightOne = 'off'
 	lightTwo = 'off'
 	lightThree = 'off'
@@ -49,6 +51,7 @@ if 'New Moon' in phaseName or phasePercent < 3:
 	lightSix = 'off'
 elif 'Waning Crescent' in phaseName:
 	if phasePercent >=3 and phasePercent < 22:
+		print 'waning crescent small'
 		lightOne = 'on'
 		lightTwo = 'off'
 		lightThree = 'off'
@@ -56,6 +59,7 @@ elif 'Waning Crescent' in phaseName:
 		lightFive = 'off'
 		lightSix = 'off'
 	elif phasePercent >= 22 and phasePercent < 45:
+	print 'waning crescent big'
 		lightOne = 'on'
 		lightTwo = 'on'
 		lightThree = 'off'
@@ -63,6 +67,7 @@ elif 'Waning Crescent' in phaseName:
 		lightFive = 'off'
 		lightSix = 'off'
 elif 'Third Quarter' in phaseName:
+	print 'third quarter'
 	if phasePercent >= 45 and phasePercent < 55:
 		lightOne = 'on'
 		lightTwo = 'on'
@@ -72,6 +77,7 @@ elif 'Third Quarter' in phaseName:
 		lightSix = 'off'
 elif 'Waning Gibbous' in phaseName:
 	if phasePercent >= 55 and phasePercent < 88:
+		print 'waning gibbous small'
 		lightOne = 'on'
 		lightTwo = 'on'
 		lightThree = 'on'
@@ -79,6 +85,7 @@ elif 'Waning Gibbous' in phaseName:
 		lightFive = 'off'
 		lightSix = 'off'
 	elif phasePercent >= 88 and phasePercent < 97:
+		print 'waning gibbous big'
 		lightOne = 'on'
 		lightTwo = 'on'
 		lightThree = 'on'
@@ -86,6 +93,7 @@ elif 'Waning Gibbous' in phaseName:
 		lightFive = 'on'
 		lightSix = 'off'		
 elif 'Full' in phaseName or phasePercent >=97:
+	print 'full'
 	lightOne = 'on'
 	lightTwo = 'on'
 	lightThree = 'on'
