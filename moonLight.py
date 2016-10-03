@@ -70,7 +70,7 @@ elif 'Third Quarter' in phaseName:
 		lightFour = 'off'
 		lightFive = 'off'
 		lightSix = 'off'
-elif phaseName = 'Waning Gibbous':
+elif 'Waning Gibbous' in phaseName:
 	if phasePercent >= 55 and phasePercent < 88:
 		lightOne = 'on'
 		lightTwo = 'on'
