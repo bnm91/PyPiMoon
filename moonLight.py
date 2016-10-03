@@ -63,7 +63,7 @@ elif 'Waning Crescent' in phaseName:
 		lightFive = 'off'
 		lightSix = 'off'
 elif 'Third Quarter' in phaseName:
-	if phasePercent >= 45 and phasePercent < 55
+	if phasePercent >= 45 and phasePercent < 55:
 		lightOne = 'on'
 		lightTwo = 'on'
 		lightThree = 'on'
