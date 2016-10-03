@@ -18,6 +18,8 @@ soup = BeautifulSoup(data, 'lxml')
 phasePercentSpan = soup.find('span', {'id': 'cur-moon-percent'})
 
 phasePercent = phasePercentSpan.get_text()
+phasePercent = phasePercent[0:len(phasePercent) - 1]
+phasePercent = float(phasePercent)
 
 print phasePercent
 
@@ -59,7 +61,7 @@ elif 'Waning Crescent' in phaseName:
 		lightFive = 'off'
 		lightSix = 'off'
 	elif phasePercent >= 22 and phasePercent < 45:
-	print 'waning crescent big'
+		print 'waning crescent big'
 		lightOne = 'on'
 		lightTwo = 'on'
 		lightThree = 'off'
