@@ -93,7 +93,15 @@ elif 'Waning Gibbous' in phaseName:
 		lightThree = 'on'
 		lightFour = 'on'
 		lightFive = 'on'
-		lightSix = 'off'		
+		lightSix = 'off'
+	elif phasePercent >= 97:
+                print 'waning gibbous basically full'
+		lightOne = 'on'
+		lightTwo = 'on'
+		lightThree = 'on'
+		lightFour = 'on'
+		lightFive = 'on'
+		lightSix = 'on'
 elif 'Full' in phaseName or phasePercent >=97:
 	print 'full'
 	lightOne = 'on'
