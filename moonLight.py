@@ -41,6 +41,7 @@ while True:
 
         print phaseName
 
+        lights = [0, 0, 0, 0, 0, 0]
 
         #determine how lit up the room moon should be
         #TODO implement Pi led.on/led.off instead of these variables
@@ -50,6 +51,7 @@ while True:
         lightFour = 'off'  #pin 11
         lightFive = 'off'  #pin 19
         lightSix = 'off'   #pin 22
+
 
         ledOne.off()
         ledTwo.off()
@@ -151,6 +153,31 @@ while True:
                         ledFour.off()
                         ledFive.off()
                         ledSix.off()
+        elif 'Waxing Gibbous' in phaseName:
+                if phasePercent >= 55 and phasePercent < 88:
+                        print 'waxing gibbous small'
+                        lightOne = 'off'
+                        lightTwo = 'off'
+                        lightThree = 'on'
+                        lightFour = 'on'
+                        lightFive = 'on'
+                        lightSix = 'on'
+                elif phasePercent >= 88 and phasePercent < 97:
+                        print 'waxing gibbous big'
+                        lightOne = 'off'
+                        lightTwo = 'on'
+                        lightThree = 'on'
+                        lightFour = 'on'
+                        lightFive = 'on'
+                        lightSix = 'on'
+                elif phasePercent >= 97:
+                        print 'waning gibbous basically full'
+                        lightOne = 'on'
+                        lightTwo = 'on'
+                        lightThree = 'on'
+                        lightFour = 'on'
+                        lightFive = 'on'
+                        lightSix = 'on'
 
 
                 
