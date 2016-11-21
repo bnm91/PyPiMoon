@@ -60,6 +60,8 @@ while True:
         ledFive.off()
         ledSix.off()
 
+        #
+
         #TODO refactor this logic
         #TODO add waxing logic
         if 'New Moon' in phaseName or phasePercent < 3:
